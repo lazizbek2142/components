@@ -1,5 +1,17 @@
 ---
+import Action from "../components/Action.svelte";
+import Avatar from "../components/Avatar.svelte";
+import Banner from "../components/banner/Banner.svelte";
+import BannerText from "../components/banner/BannerText.svelte";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Zucco academy" />
+<Layout title="Zucco academy">
+  <Banner>
+    <Avatar color={"grey"} />
+    <BannerText
+      >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, ab.</BannerText
+    >
+    <Action position={"end"}><button>click</button></Action>
+  </Banner>
+</Layout>

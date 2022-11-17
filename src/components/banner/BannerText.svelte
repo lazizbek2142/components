@@ -7,6 +7,6 @@
 <style>
   .bannerText {
     text-align: start;
-    padding: 0.5rem;
+    padding: 1rem;
   }
 </style>
