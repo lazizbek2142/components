@@ -1,20 +1,14 @@
-<script>
-  import Button from "../Button.svelte";
-  import PanelsNav from "./PanelsNav.svelte";
-</script>
-
 <div class="panels">
-  <div class="panelsItem">
-    <PanelsNav><slot /></PanelsNav>
-    <Button />
-  </div>
-  <slot />
+  <slot class="slot" />
 </div>
 
 <style>
   .panels {
-    width: 20rem;
-    border: 1px solid;
-    display: flex;
+    border-radius: 7px;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 0.5px 0.5px rgba(185, 178, 178, 0.547);
+    margin-bottom: 0.5px;
+    overflow: hidden;
   }
 </style>

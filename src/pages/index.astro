@@ -1,17 +1,29 @@
 ---
-import Action from "../components/Action.svelte";
-import Avatar from "../components/Avatar.svelte";
-import Banner from "../components/banner/Banner.svelte";
-import BannerText from "../components/banner/BannerText.svelte";
+import Button from "../components/Button.svelte";
+import ExpansionPanels from "../components/expansionPanels/ExpansionPanels.svelte";
+import ExpansionPanelsContent from "../components/expansionPanels/ExpansionPanelsContent.svelte";
+import PanelsNav from "../components/expansionPanels/PanelsNav.svelte";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Zucco academy">
-  <Banner>
-    <Avatar color={"grey"} />
-    <BannerText
-      >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, ab.</BannerText
-    >
-    <Action position={"end"}><button>click</button></Action>
-  </Banner>
+  <PanelsNav
+    readonly={false}
+    title={"TITLE"}
+    text={`
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi obcaecati nemo ex molestias voluptatem impedit laudantium natus consequuntur distinctio magni.`}
+    client:only>Item</PanelsNav
+  >
+  <PanelsNav
+    title={"TITLE"}
+    text={`
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi obcaecati nemo ex molestias voluptatem impedit laudantium natus consequuntur distinctio magni.`}
+    client:only>Item</PanelsNav
+  >
+  <PanelsNav
+    title={"TITLE"}
+    text={`
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi obcaecati nemo ex molestias voluptatem impedit laudantium natus consequuntur distinctio magni.`}
+    client:only>Item</PanelsNav
+  >
 </Layout>

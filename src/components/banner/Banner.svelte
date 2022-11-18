@@ -1,6 +1,4 @@
 <script>
-  import BannerText from "./BannerText.svelte";
-  import Action from "../Action.svelte";
 </script>
 
 <div class="container">

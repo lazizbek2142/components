@@ -5,6 +5,8 @@
   export let radius;
   export let textColor;
   export let textSize;
+  export let padding;
+  export let active;
 </script>
 
 {#if to}
@@ -13,16 +15,16 @@
     href={to}
     style="background-color: {color}; border-radius: {radius}; font-size: {textSize}; color: {textColor}"
   >
-    <i class={icon} style="font-size: {textSize};" />
+    <i class={icon} style="font-size: {textSize}; padding: {padding}" />
     <slot />
   </a>
 {/if}
 {#if !to}
   <button
     class="button"
-    style="background-color: {color}; border-radius: {radius}; font-size: {textSize}; color: {textColor}"
+    style="background: {color}; border-radius: {radius}; font-size: {textSize}; color: {textColor}"
   >
-    <i class={icon} style="font-size: {textSize};" />
+    <i class={icon} style="font-size: {textSize}; padding: {padding}" />
     <slot />
   </button>
 {/if}
@@ -36,7 +38,7 @@
     display: block;
     text-align: center;
     justify-items: center;
-    padding: 1rem;
     cursor: pointer;
+    padding: 0;
   }
 </style>
